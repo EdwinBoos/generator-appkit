@@ -1,0 +1,3 @@
+<View controllerName="<%= moduleName %>.controller.App" xmlns="sap.m" displayBlock="true">
+	<App id="appId" />
+</View>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title><%= title %></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+	<script src="./resources/sap-ui-core.js"
+			id="sap-ui-bootstrap"
+			data-sap-ui-logLevel="INFO"
+			data-sap-ui-logLevel="ERROR"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-libs="sap.m, sap.ui.commons"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-resourceroots='{ "<%= moduleName %>" : "./"}' >
+	</script>
+	<script>
+		new sap.m.Shell("Shell", {
+			title : "iRetPlat",
+			showLogout : false,
+			app : new sap.ui.core.ComponentContainer({
+				name : "<%= moduleName %>"
+			})
+		}).placeAt("content");
+	</script>
+</head>
+<body class="sapUiBody" role="application">
+<div id="content"></div>
+</body>
+</html>

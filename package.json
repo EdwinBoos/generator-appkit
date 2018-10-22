@@ -1,0 +1,21 @@
+{
+  "name": "generator-appkit",
+  "version": "0.1.0",
+  "description": "ui5 kit generator",
+  "author": "Edwin Boos",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2",
+    "colors": "1.1.2"
+  },
+  "devDependencies": {
+    "yo": "^2.0.0"
+  }
+}

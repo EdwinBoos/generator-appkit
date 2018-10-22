@@ -1,0 +1,73 @@
+{
+    "sap.app": {
+        "id": "<%= moduleName %>",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APPLICATION_TEXT}}"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_bluecrystal",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "resourceRoots": {},
+        "componentName": "<%= moduleName %>",
+        "resources": {
+            "js": [{
+                "uri": "./libraries/bundle.js"
+            }
+            ]
+        },
+        "rootView": "<%= moduleName %>.view.App",
+        "config": {
+            "serviceConfig": {
+                "invoiceRemote": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+            },
+            "serviceConfigLocal": {
+                "invoiceRemote": "proxy/https/irpe.fis-ilog.de/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+            }
+        },
+        "dependencies": {
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "<%= moduleName %>.i18n.i18n"
+                }
+            } 
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "<%= moduleName %>.view",
+                "controlId": "appId",
+                "controlAggregation": "pages"
+            },
+            "routes":[
+                {
+                    "pattern" : "",
+                    "name":"defaultRoute",
+                    "target":"defaultTarget"
+                }
+            ],
+            "targets":{
+                "defaultTarget":{
+                    "viewName":"<%= controllerName %>"
+                }
+            }
+        }
+    }
+}

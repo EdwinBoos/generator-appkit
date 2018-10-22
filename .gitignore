@@ -1,0 +1,3 @@
+/node_modules/
+/generators/app/templates/node_modules/
+/generators/app/templates/WebContent/libraries/node_modules/
