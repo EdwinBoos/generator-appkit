@@ -13,7 +13,7 @@
 - prettier <br>
 - browserify<br>
 - and more.. <br>
-
+[Read here to learn more about gulp](./generators/app/README.md)
 <h3> Use sub-generators to integrate controllers, views, fragments, i18n files in your existing project. </h3>
 
 
