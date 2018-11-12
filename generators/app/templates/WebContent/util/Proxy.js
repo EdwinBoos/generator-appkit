@@ -67,7 +67,7 @@ jQuery.sap.declare("<%= moduleName %>.util.Proxy");
    */
   reset() {
     this.resetCache();
-
+    this._hasListBeenSet = false;
     return this;
   }
 
