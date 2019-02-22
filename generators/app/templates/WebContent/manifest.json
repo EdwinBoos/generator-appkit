@@ -32,7 +32,7 @@
                 "invoiceRemote": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             },
             "serviceConfigLocal": {
-                "invoiceRemote": "proxy/https/irpe.fis-ilog.de/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+                "invoiceRemote": "proxy/https/your-url.com/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             }
         },
         "dependencies": {
