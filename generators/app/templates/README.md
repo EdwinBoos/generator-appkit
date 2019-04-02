@@ -58,23 +58,23 @@ Here you see a overview of all the tasks and childtasks:
 
 - they will create a new folder in the same directory as the generated app.
 
-   ``` workspace/fooES6 ( generated app ) creates => workspace/foo ```
+   ``` workspace/fooES6 ( generated app ) creates => workspace/build ```
    
    
-- transpile tasks will transpile files, create and mirror all folder names within foo, and will put the transpiled file in the correct folder f. ex.:
+- transpile tasks will transpile files, create and mirror all folder names within build, and will put the transpiled file in the correct folder f. ex.:
    
-   ``` workspace/fooES6/WebContent/controller/Main.controller.js create and transpile => workspace/foo/WebContent/controller/Main.controller.js ```<br> 
-   ``` workspace/fooES6/WebContent/util/Enum.js create and transpile => workspace/foo/WebContent/util/Enum.js ``` <br>
-   ``` workspace/fooES6/WebContent/libraries/bundle.js create and transpile => workspace/foo/WebContent/libraries/bundle.js ```  <br>
-   ``` workspace/fooES6/WebContent/Component.js create and transpile => workspace/foo/WebContent/Component.js ``` <br>
+   ``` workspace/fooES6/WebContent/controller/Main.controller.js create and transpile => workspace/build/WebContent/controller/Main.controller.js ```<br> 
+   ``` workspace/fooES6/WebContent/util/Enum.js create and transpile => workspace/build/WebContent/util/Enum.js ``` <br>
+   ``` workspace/fooES6/WebContent/libraries/bundle.js create and transpile => workspace/build/WebContent/libraries/bundle.js ```  <br>
+   ``` workspace/fooES6/WebContent/Component.js create and transpile => workspace/build/WebContent/Component.js ``` <br>
    ``` ... ```
 
--  sync task will copy, create and mirror all folder names within foo f. ex.: 
+-  sync task will copy, create and mirror all folder names within build f. ex.: 
  
-   ``` workspace/fooES6/WebContent/view/Main.view.xml create and copy => workspace/foo/WebContent/view/Main.main.xml ```   <br> 
-   ``` workspace/fooES6/WebContent/fragment/Fragment.view.xml copy => workspace/foo/WebContent/fragment/Fragment.main.xml ```   <br> 
-   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/foo/WebContent/index.html ```    <br>
-   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/foo/WebContent/view/index.html ``` <br>
+   ``` workspace/fooES6/WebContent/view/Main.view.xml create and copy => workspace/build/WebContent/view/Main.main.xml ```   <br> 
+   ``` workspace/fooES6/WebContent/fragment/Fragment.view.xml copy => workspace/build/WebContent/fragment/Fragment.main.xml ```   <br> 
+   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/build/WebContent/index.html ```    <br>
+   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/build/WebContent/view/index.html ``` <br>
    ``` ... ```
 
 - sync task excludes the copy of all unnecessary files in fooES6 f. ex.:.
