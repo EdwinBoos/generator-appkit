@@ -40,22 +40,22 @@ gulp.task("transpile-uglify", () => {
     .src("./WebContent/util/**.js")
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
-    .pipe(gulp.dest("../<%= title%>/WebContent/util"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/util"));
   gulp
     .src("./WebContent/control/**.js")
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
-    .pipe(gulp.dest("../<%= title%>/WebContent/control"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/control"));
   gulp
     .src("./WebContent/Component.js")
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
-    .pipe(gulp.dest("../<%= title%>/WebContent/"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/"));
   gulp
     .src("./WebContent/controller/**.js")
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
-    .pipe(gulp.dest("../<%= title%>/WebContent/controller"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/controller"));
   gulp
     .src([
       "./WebContent/libraries/**.js",
@@ -64,27 +64,27 @@ gulp.task("transpile-uglify", () => {
     ])
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
-    .pipe(gulp.dest("../<%= title%>/WebContent/libraries/"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/libraries/"));
 });
 
 gulp.task("transpile-clean", () => {
   gulp
     .src("./WebContent/util/**.js")
     .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("../<%= title%>/WebContent/util"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/util"));
   gulp
     .src("./WebContent/control/**.js")
     .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("../<%= title%>/WebContent/control"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/control"));
 
   gulp
     .src("./WebContent/Component.js")
     .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("../<%= title%>/WebContent/"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/"));
   gulp
     .src("./WebContent/controller/**.js")
     .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("../<%= title%>/WebContent/controller"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/controller"));
   gulp
     .src([
       "./WebContent/libraries/**.js",
@@ -92,38 +92,38 @@ gulp.task("transpile-clean", () => {
       "!./WebContent/libraries/RequireLibs.js"
     ])
     .pipe(babel({ presets: ["es2015"] }))
-    .pipe(gulp.dest("../<%= title%>/WebContent/libraries/"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/libraries/"));
 });
 
 gulp.task("sync", () => {
   // Copying or mirroring files into new es5 project folder
-  gulp.src([".project"]).pipe(gulp.dest("../<%= title%>"));
-  gulp.src([".classpath"]).pipe(gulp.dest("../<%= title%>"));
+  gulp.src([".project"]).pipe(gulp.dest("./<%= title%>"));
+  gulp.src([".classpath"]).pipe(gulp.dest("./<%= title%>"));
   gulp
     .src([".settings/**"])
-    .pipe(gulp.dest("../<%= title%>/.settings"));
+    .pipe(gulp.dest("./<%= title%>/.settings"));
   gulp
     .src(["WebContent/WEB-INF/web.xml"])
-    .pipe(gulp.dest("../<%= title%>/WebContent/WEB-INF"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/WEB-INF"));
 
   gulp
     .src(["WebContent/fragment/**.xml"])
-    .pipe(gulp.dest("../<%= title%>/WebContent/fragment"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/fragment"));
   gulp
     .src(["WebContent/view/**.xml"])
-    .pipe(gulp.dest("../<%= title%>/WebContent/view"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/view"));
   gulp
     .src(["WebContent/css/**.css"])
-    .pipe(gulp.dest("../<%= title%>/WebContent/css"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/css"));
   gulp
     .src(["WebContent/i18n/**.properties"])
-    .pipe(gulp.dest("../<%= title%>/WebContent/i18n"));
+    .pipe(gulp.dest("./<%= title%>/WebContent/i18n"));
   gulp
     .src(["WebContent/manifest.json"])
-    .pipe(gulp.dest("../<%= title%>/WebContent"));
+    .pipe(gulp.dest("./<%= title%>/WebContent"));
   gulp
     .src(["WebContent/index.html"])
-    .pipe(gulp.dest("../<%= title%>/WebContent"));
+    .pipe(gulp.dest("./<%= title%>/WebContent"));
 });
 
 gulp.task("prettier", () => {
