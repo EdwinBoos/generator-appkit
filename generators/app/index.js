@@ -85,6 +85,13 @@ module.exports = class extends generator {
         `${projectOutputPath}/${projectDirectoryName}/.babelrc`
       )
    );
+  
+   this.fs.copy(
+      this.templatePath(".gitignore"),
+      this.destinationPath(
+        `${projectOutputPath}/${projectDirectoryName}/.gitignore`
+      )
+   );
 
     this.fs.copy(
       this.templatePath(".classpath"),
