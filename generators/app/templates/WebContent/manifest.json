@@ -29,10 +29,10 @@
         "rootView": "<%= moduleName %>.view.App",
         "config": {
             "serviceConfig": {
-                "invoiceRemote": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+                "serviceURL": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             },
             "serviceConfigLocal": {
-                "invoiceRemote": "proxy/https/your-url.com/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+                "serviceProxyURL": "proxy/https/your-url.com/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             }
         },
         "dependencies": {

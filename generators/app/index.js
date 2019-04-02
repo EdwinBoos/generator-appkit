@@ -67,8 +67,7 @@ module.exports = class extends generator {
     const serviceName = this.answers.serviceName;
     const modulePath = this.answers.moduleName.replace(/\./g, "/");
     const projectOutputPath = this.answers.outputPath;
-    const projectOutputName = this.answers.name;
-    const projectDirectoryName = `${this.answers.name}ES6`;
+    const projectDirectoryName = this.answers.name;
 
     this.fs.copyTpl(
       this.templatePath("package.json"),
@@ -76,7 +75,7 @@ module.exports = class extends generator {
         `${projectOutputPath}/${projectDirectoryName}/package.json`
       ),
       {
-        title: this.answers.name
+        title: this.answers.name 
       }
     );
 
@@ -198,7 +197,7 @@ module.exports = class extends generator {
         `${projectOutputPath}/${projectDirectoryName}/gulpfile.js`
       ),
       {
-        title: this.answers.name,
+        title: "build",
         moduleName
       }
     );
