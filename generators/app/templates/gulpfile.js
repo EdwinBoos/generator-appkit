@@ -35,7 +35,7 @@ const stylish = require("jshint-stylish");
  * ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  *
  */
-gulp.task("transpile-uglify", () => {
+gulp.task("transpile-uglify", (done) => {
   gulp
     .src("./WebContent/util/**.js")
     .pipe(babel({ presets: ["es2015"] }))
@@ -65,9 +65,11 @@ gulp.task("transpile-uglify", () => {
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(uglify())
     .pipe(gulp.dest("./<%= title%>/WebContent/libraries/"));
+
+  done();
 });
 
-gulp.task("transpile-clean", () => {
+gulp.task("transpile-clean", (done) => {
   gulp
     .src("./WebContent/util/**.js")
     .pipe(babel({ presets: ["es2015"] }))
@@ -93,9 +95,11 @@ gulp.task("transpile-clean", () => {
     ])
     .pipe(babel({ presets: ["es2015"] }))
     .pipe(gulp.dest("./<%= title%>/WebContent/libraries/"));
+
+   done();
 });
 
-gulp.task("sync", () => {
+gulp.task("sync", (done) => {
   // Copying or mirroring files into new es5 project folder
   gulp.src([".project"]).pipe(gulp.dest("./<%= title%>"));
   gulp.src([".classpath"]).pipe(gulp.dest("./<%= title%>"));
@@ -124,9 +128,11 @@ gulp.task("sync", () => {
   gulp
     .src(["WebContent/index.html"])
     .pipe(gulp.dest("./<%= title%>/WebContent"));
+
+   done();
 });
 
-gulp.task("prettier", () => {
+gulp.task("prettier", (done) => {
   gulp
     .src("**.js")
     .pipe(prettier({ singleQuote: false }))
@@ -151,6 +157,8 @@ gulp.task("prettier", () => {
     ])
     .pipe(prettier({ singleQuote: false }))
     .pipe(gulp.dest("WebContent/libraries/"));
+
+    done();
 });
 
 gulp.task("xmlLint", () =>
@@ -171,13 +179,13 @@ gulp.task("jsHint", () =>
     .pipe(jshint.reporter(stylish))
 );
 
-gulp.task("check", ["jsHint", "xmlLint"]);
+gulp.task("check", gulp.series(["jsHint", "xmlLint"]));
 
-gulp.task("build", ["transpile-uglify", "sync"], done => done());
+gulp.task("build", gulp.series(["transpile-uglify", "sync"]));
 
-gulp.task("build-debug", ["transpile-clean", "sync"], done => done());
+gulp.task("build-debug", gulp.series(["transpile-clean", "sync"]));
 
-gulp.task("default", ["build-debug"], () => {
+gulp.task("default", gulp.series(["build-debug"]), () => {
   gulp.watch(
     ["./**", "!./node_modules/**", ".!/WebContent/libraries/node_modules/**"],
     { interval: 500 },

@@ -13,7 +13,7 @@
     "chalk": "^1.1.3",
     "colors": "^1.1.2",
     "deep-extend": "^0.6.0",
-    "yeoman-generator": "latest",
+    "yeoman-generator": "3.2.0",
     "yosay": "^1.0.2"
   },
   "devDependencies": {
