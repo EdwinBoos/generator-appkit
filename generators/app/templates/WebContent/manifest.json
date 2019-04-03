@@ -28,6 +28,7 @@
         },
         "rootView": "<%= moduleName %>.view.App",
         "config": {
+            "fullWidth" : true,
             "serviceConfig": {
                 "serviceURL": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             },
