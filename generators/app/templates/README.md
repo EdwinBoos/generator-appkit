@@ -17,15 +17,9 @@ Inside of this folder we have a complete new ui5 application with all neccessary
 
 The build folder is now ready to run in the browser.
 
-This means now, that you can code in the root folder in es6, and then build the project, then you need to refresh your browser, and
-it's there.
+You code or make changes in the root folder in es6, and then build the project, then you need to refresh your browser and the change is there.
 
-If you wan't to let it build automatically when a change happens in es6 folder, there is a watcher task implemented: just call ```gulp ```
-
-
-
-
-
+If you wan't to let it build automatically when a change happens in es6 folder, there is a watcher task implemented: Type  ```gulp ```
 
 
 Here you see a overview of all the tasks and childtasks:
