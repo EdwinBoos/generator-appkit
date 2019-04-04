@@ -48,7 +48,7 @@ You will have to go trough five steps:
 
 * By entering ```yo appkit --generators``` you will see all generators available
 * With ```yo appkit:nameofsubgenerator``` you can run a subgenerator
-*
+
 
 appkit-generator has following sub-generators available:
 
