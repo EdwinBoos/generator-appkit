@@ -1,7 +1,5 @@
 # generator-appkit [![npm version](https://badge.fury.io/js/generator-appkit.svg)](https://badge.fury.io/js/generator-appkit)
 
-# Why?
-
 <h3> Generate SAP UI5 projects which supports features like:</h3>
 
 
