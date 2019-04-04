@@ -1,13 +1,11 @@
 # This UI5 App has been generated with https://github.com/EdwinBoos/generator-appkit
 
+<h3> Getting started with gulpjs </h3>
 
-<h3> It does support features like es6 transpilation, minifying files, xml validation, jsHint, prettier, browserify, and many more.. </h3>
+First we need to install gulp globally 
+```npm install gulp -g ```
 
-# gulpjs - The streaming build system 
-
-
-
-Open up your Terminal, navigate to current folder enter: ```npm install ```
+Next we need to open up the Terminal, navigate to the generated app folder and enter: ```npm install ```
 *  By entering "gulp --tasks" you will see a tree-overview of tasks in your terminal 
 * With "gulp taskname" you can start a predefined task 
 * With "gulp" you will start the default task
@@ -89,14 +87,3 @@ Here you see a overview of all the tasks and childtasks:
 
 [Here you go](./WebContent/libraries/README.md)
 
-
-  
-
-# WebContent/util Folder
-
- * FuseUI5.js (Fuzzy search easily with Lists and Tables.)
- * Proxy.js (Fuzzy Search Proxy class for efficiency)
- * Enum.js (Global Enums here)
- * Formatter.js (Formatting your view's bindings)
- * ...and many more
- *    
