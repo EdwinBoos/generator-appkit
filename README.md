@@ -14,10 +14,7 @@
 - browserify<br>
 - and more.. <br>
 
-[Click here if you want to learn more about how to use gulp in this project](./generators/app/templates/README.md)
-
 <h3> Use sub-generators to integrate controllers, views, fragments, i18n files in your existing project. </h3>
-
 
 
 # Installation
@@ -41,9 +38,7 @@ You will have to go trough five steps:
       ``` ../output/ ``` - Go a folder back, and place it in the output folder. (When folder does not exist, then it will be created.)
  
 
- 
-
-
+[Getting started with transpiling and more](./generators/app/templates/README.md)
 
 # Sub-generators
 
