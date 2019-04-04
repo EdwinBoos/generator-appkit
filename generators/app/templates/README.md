@@ -10,6 +10,24 @@ Next we need to open up the Terminal, navigate to the generated app folder and e
 * With "gulp taskname" you can start a predefined task 
 * With "gulp" you will start the default task
 
+We will try to transpile and minify our whole project in es5 back by entering: ```gulp build ```
+
+After this, gulp has created a new folder inside of root folder named build.
+Inside of this folder we have a complete new ui5 application with all neccessary files copied, and all js files minified and translated back in es5 syntax.
+
+The build folder is now ready to run in the browser.
+
+This means now, that you can code in the root folder in es6, and then build the project, then you need to refresh your browser, and
+it's there.
+
+If you wan't to let it build automatically when a change happens in es6 folder, there is a watcher task implemented: just call ```gulp ```
+
+
+
+
+
+
+
 Here you see a overview of all the tasks and childtasks:
 
 ```
@@ -83,7 +101,4 @@ Here you see a overview of all the tasks and childtasks:
    ``` ... ```
 
 
-# browserify - Install modules from NPM, bundle them up, and load them into your app
-
-[Here you go](./WebContent/libraries/README.md)
 
