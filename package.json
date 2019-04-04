@@ -1,22 +1,33 @@
 {
-  "name": "generator-appkit",
-  "version": "0.1.0",
-  "description": "ui5 kit generator",
-  "author": "Edwin Boos",
-  "files": [
-    "generators"
-  ],
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "colors": "^1.1.2",
-    "deep-extend": "^0.6.0",
-    "yeoman-generator": "3.2.0",
-    "yosay": "^1.0.2"
-  },
-  "devDependencies": {
-    "yo": "^2.0.0"
-  }
+   "name":"generator-appkit",
+   "version":"0.1.0",
+   "description":"ui5 kit generator",
+   "files":[
+      "generators"
+   ],
+   "dependencies":{
+      "chalk":"^1.1.3",
+      "colors":"^1.1.2",
+      "deep-extend":"^0.6.0",
+      "yeoman-generator":"3.2.0",
+      "yosay":"^1.0.2"
+   },
+   "devDependencies":{
+      "yo":"^2.0.0"
+   },
+   "repository":{
+      "type":"git",
+      "url":"https://github.com/EdwinBoos/generator-appkit.git"
+   },
+   "keywords":[
+      "yeoman-generator",
+      "ui5",
+      "generator",
+      "es6",
+      "babel",
+      "openui5",
+      "sapui5"
+   ],
+   "author":"Edwin Boos",
+   "license":"MIT"
 }

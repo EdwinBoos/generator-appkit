@@ -1,0 +1,14 @@
+<View controllerName="enter.some.module.name.controller.Main"
+      xmlns="sap.m" displayBlock="true" >
+
+    <Page title="{i18n>APPLICATION_TEXT}" showNavButton="true" showHeader="true" navButtonPress="handleNavigateBack">
+ 
+
+           
+
+        <footer>
+            <OverflowToolbar />
+        </footer>
+    </Page>
+
+</View>
