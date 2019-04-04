@@ -1,4 +1,4 @@
-# generator-appkit
+# generator-appkit [![npm version](https://badge.fury.io/js/generator-appkit.svg)](https://badge.fury.io/js/generator-appkit)
 
 # Why?
 
