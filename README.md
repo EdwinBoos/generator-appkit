@@ -19,7 +19,7 @@
 
 # Installation
 
-1. Open up your Terminal, navigate to current folder enter: ```npm install ```
+1. Open up your Terminal, navigate to the root folder enter: ```npm install ```
 2. Install yo globally, enter: ```npm install yo -g```
 3. Create a symlink just enter :  ```npm link```
 
