@@ -38,7 +38,7 @@ You will have to go trough five steps:
       ``` ../output/ ``` - Go a folder back, and place it in the output folder. (When folder does not exist, then it will be created.)
  
 
-[Getting started with transpiling and more](./generators/app/templates/README.md) <br>
+[Getting started with gulp, transpiling and more](./generators/app/templates/README.md) <br>
 [Getting started with browserify and installing libraries](./generators/app/templates/WebContent/libraries/README.md)
 
 
