@@ -1,6 +1,6 @@
 {
    "name":"generator-appkit",
-   "version":"0.1.1",
+   "version":"0.1.2",
    "description":"ui5 kit generator",
    "files":[
       "generators"
@@ -17,7 +17,7 @@
    },
    "repository":{
       "type":"git",
-      "url":"https://github.com/EdwinBoos/generator-appkit.git"
+      "url":"git+https://github.com/EdwinBoos/generator-appkit"
    },
    "keywords":[
       "yeoman-generator",
