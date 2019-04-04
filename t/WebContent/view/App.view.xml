@@ -1,3 +1,0 @@
-<View controllerName="enter.some.module.name.controller.App" xmlns="sap.m" displayBlock="true">
-	<App id="appId" />
-</View>
