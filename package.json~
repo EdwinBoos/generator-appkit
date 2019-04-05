@@ -1,6 +1,6 @@
 {
    "name": "generator-appkit",
-   "version": "0.2.0",
+   "version": "0.1.10",
    "description": "ui5 es6 app generator with features like es6 transpilation, browserify, xml validation, minifying source files, jsHint, prettier and more",
    "files": [
       "generators"
