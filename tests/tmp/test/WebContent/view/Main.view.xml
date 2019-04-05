@@ -1,4 +1,4 @@
-<View controllerName="de.test.controller.Main.controller.js"
+<View controllerName="de.test.controller.Main"
       xmlns="sap.m" displayBlock="true" >
 
     <Page title="{i18n>APPLICATION_TEXT}" showNavButton="true" showHeader="true" navButtonPress="handleNavigateBack">

@@ -13,7 +13,7 @@ sap.ui.define(
     "use strict";
 
     SuperController.extend(
-      "de.test.controller.Main.controller.js",
+      "de.test.controller.Main",
       {
         onInit() {
           this.getRouter()
