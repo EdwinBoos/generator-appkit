@@ -25,6 +25,11 @@ describe("generator-appkit", () => {
   it("creates files", () => {
     assert.file([
       path.join(__dirname, "tmp/test/.babelrc"),
+      path.join(__dirname, "tmp/test/.gitignore"),
+      path.join(__dirname, "tmp/test/.project"),
+      path.join(__dirname, "tmp/test/.classpath"),
+      path.join(__dirname, "tmp/test/package.json"),
+      path.join(__dirname, "tmp/test/README.md"),
       path.join(__dirname, "tmp/test/gulpfile.js")
     ]);
   });
