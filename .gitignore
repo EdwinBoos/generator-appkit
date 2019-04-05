@@ -1,3 +1,10 @@
 /node_modules/
 /generators/app/templates/node_modules/
 /generators/app/templates/WebContent/libraries/node_modules/
+/tests/app/
+/tests/controller/
+/tests/fragment-controller/
+/tests/view/
+/tests/fragment/
+/tests/i18n/
+
