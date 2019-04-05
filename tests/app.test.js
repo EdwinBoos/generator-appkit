@@ -11,21 +11,17 @@ describe("generator-appkit", () => {
       .inDir(path.join(__dirname, "tmp"))
       .withPrompts({
         name: "test",
-	moduleName : "de.test",
-	controllerName : "Main.controller.js",
-	serviceName : "SERVICE_NAME",
-	outputPath : "."
-
+        moduleName: "de.test",
+        controllerName: "Main.controller.js",
+        serviceName: "SERVICE_NAME",
+        outputPath: "."
       });
-   });
-  
-    afterEach(() => {
-    	    rimraf.sync(path.join(__dirname, 'tmp'));
-	  });
-   it("creates file", () => {
-     assert.file(path.join(__dirname, "tmp/.babelrc"));
-   });
-
-
   });
 
+  afterEach(() => {
+    rimraf.sync(path.join(__dirname, "tmp"));
+  });
+  it("creates file", () => {
+    assert.file(path.join(__dirname, "tmp/.babelrc"));
+  });
+});
