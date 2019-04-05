@@ -4,26 +4,27 @@ const assert = require("yeoman-assert");
 const helpers = require("yeoman-test");
 const rimraf = require("rimraf");
 
-describe("controller-subgenerator", () => {
+describe("fragment-controller-subgenerator", () => {
   beforeEach(() => {
     return helpers
       .run(path.join(__dirname, "../generators/controller"))
-      .inDir(path.join(__dirname, "controller"))
+      .inDir(path.join(__dirname, "fragment-controller"))
       .withPrompts({
-        controllerName: "Test",
+        controllerName: "Fragment",
         moduleName: "de.test",
         path: "./",
-	choice: "default-controller"
+	choice: "fragment-controller"
       });
   });
 
   afterEach(() => {
-    rimraf.sync(path.join(__dirname, "controller"));
+    rimraf.sync(path.join(__dirname, "fragment-controller"));
   });
 
-  it("creates default Controller", () => {
+  it("creates fragment controller", () => {
     assert.file(
-      path.join(__dirname, "controller/Test.controller.js")
+      path.join(__dirname, "fragment-controller/Fragment.controller.js")
     );
   });
-});
+})
+
