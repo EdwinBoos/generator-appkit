@@ -1,0 +1,74 @@
+{
+    "sap.app": {
+        "id": "de.test",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APPLICATION_TEXT}}"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_bluecrystal",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "resourceRoots": {},
+        "componentName": "de.test",
+        "resources": {
+            "js": [{
+                "uri": "./libraries/bundle.js"
+            }
+            ]
+        },
+        "rootView": "de.test.view.App",
+        "config": {
+            "fullWidth" : true,
+            "serviceConfig": {
+                "serviceURL": "/sap/opu/odata/irp/SERVICE_NAME/?sap-client=001"
+            },
+            "serviceConfigLocal": {
+                "serviceProxyURL": "proxy/https/your-url.com/sap/opu/odata/irp/SERVICE_NAME/?sap-client=001"
+            }
+        },
+        "dependencies": {
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "de.test.i18n.i18n"
+                }
+            } 
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "de.test.view",
+                "controlId": "appId",
+                "controlAggregation": "pages"
+            },
+            "routes":[
+                {
+                    "pattern" : "",
+                    "name":"defaultRoute",
+                    "target":"defaultTarget"
+                }
+            ],
+            "targets":{
+                "defaultTarget":{
+                    "viewName":"Main.controller.js"
+                }
+            }
+        }
+    }
+}

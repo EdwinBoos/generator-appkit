@@ -21,7 +21,11 @@ describe("generator-appkit", () => {
   afterEach(() => {
     rimraf.sync(path.join(__dirname, "tmp"));
   });
-  it("creates file", () => {
-    assert.file(path.join(__dirname, "tmp/.babelrc"));
+
+  it("creates files", () => {
+    assert.file([
+      path.join(__dirname, "tmp/test/.babelrc"),
+      path.join(__dirname, "tmp/test/gulpfile.js")
+    ]);
   });
 });
