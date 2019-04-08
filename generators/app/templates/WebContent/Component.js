@@ -19,7 +19,7 @@ sap.ui.define(
 
       createURL() {
         if (window.location.hostname === "localhost") {
-          return this.getMetadata().getConfig().serviceConfigURL;
+          return this.getMetadata().getConfig().serviceConfig.serviceURL;
         } else {
           return (
             this.getMetadata().getConfig().serviceConfig.serviceProxyURL || ""
