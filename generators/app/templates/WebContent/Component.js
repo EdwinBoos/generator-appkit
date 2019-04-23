@@ -43,7 +43,6 @@ sap.ui.define(
           modulePath: $.sap.getModulePath("<%= moduleName %>", "")
         });
 
-        odataModel.setUseBatch(false);
         this.setModel(odataModel, "odataModel");
         this.setModel(deviceModel, "device");
         this.setModel(applicationDataModel, "appData");
