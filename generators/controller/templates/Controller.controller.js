@@ -1,29 +1,28 @@
 sap.ui.define(
-  [
-    "<%= modulePath %>/controller/SuperController",
-    "<%= modulePath %>/util/Enum"
-  ],
+ [
+  "<%= modulePath %>/controller/SuperController",
+  "<%= modulePath %>/util/Enum"
+ ],
 
-  (
-    SuperController,
-    Enum,
-  
-  ) => {
-    "use strict";
+ (
+  SuperController,
+  Enum,
 
-    SuperController.extend( 
-      "<%= moduleName %>.controller.<%= controllerName %>",
-      {
-        onInit() {
+ ) => {
+  "use strict";
 
-        },
+  SuperController.extend(
+   "<%= moduleName %>.controller.<%= controllerName %>", {
+    onInit() {
 
-        onExit() {
-          this.getEventBus().destroy();
-        },
+    },
+
+    onExit() {
+     this.getEventBus().destroy();
+    },
 
 
-      }
-    );
-  }
+   }
+  );
+ }
 );

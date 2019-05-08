@@ -1,21 +1,20 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller"],
+ ["sap/ui/core/mvc/Controller"],
 
-  Controller => {
-    "use strict";
+ Controller => {
+  "use strict";
 
-    return Controller.extend(
-      "<%= moduleName %>.controller.<%= controllerName %>",
-      {
-        init() {
-          return this;
-        },
+  return Controller.extend(
+   "<%= moduleName %>.controller.<%= controllerName %>", {
+    init() {
+     return this;
+    },
 
-        connect(parentController) {
-          this.parentController = parentController;
-          return this;
-        }
-      }
-    );
-  }
+    connect(parentController) {
+     this.parentController = parentController;
+     return this;
+    }
+   }
+  );
+ }
 );
