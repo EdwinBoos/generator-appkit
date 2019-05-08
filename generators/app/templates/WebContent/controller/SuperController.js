@@ -1,39 +1,39 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller"],
+ ["sap/ui/core/mvc/Controller"],
 
-  (Controller) => {
-    "use strict";
+ (Controller) => {
+  "use strict";
 
-    return Controller.extend("<%= moduleName %>.controller.SuperController", {
-      handleNavigateBack() {
-        this.getOwnerComponent().navigateBack();
-      },
+  return Controller.extend("<%= moduleName %>.controller.SuperController", {
+   handleNavigateBack() {
+    this.getOwnerComponent().navigateBack();
+   },
 
-      getModel(name) {
-        return this.getView().getModel(name);
-      },
+   getModel(name) {
+    return this.getView().getModel(name);
+   },
 
-      setModel(model, name) {
-        return this.getView().setModel(model, name);
-      },
+   setModel(model, name) {
+    return this.getView().setModel(model, name);
+   },
 
-      getODataModel() {
-        return this.getOwnerComponent().getModel("odataModel");
-      },
+   getODataModel() {
+    return this.getOwnerComponent().getModel("odataModel");
+   },
 
-      getI18nResourceBundle() {
-        return this.getOwnerComponent()
-          .getModel("i18n")
-          .getResourceBundle();
-      },
+   getI18nResourceBundle() {
+    return this.getOwnerComponent()
+     .getModel("i18n")
+     .getResourceBundle();
+   },
 
-      getRouter() {
-        return this.getOwnerComponent().getRouter();
-      },
+   getRouter() {
+    return this.getOwnerComponent().getRouter();
+   },
 
-      getEventBus() {
-        return sap.ui.getCore().getEventBus();
-      }
-    });
-  }
+   getEventBus() {
+    return sap.ui.getCore().getEventBus();
+   }
+  });
+ }
 );

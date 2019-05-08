@@ -1,11 +1,11 @@
 jQuery.sap.declare("<%= moduleName %>.util.Enum");
 
 <%= moduleName %>.util.Enum = {
-  EventChannels: {},
+ EventChannels: {},
 
-  NetworkEvents: {},
+ NetworkEvents: {},
 
-  ODataPaths: {},
+ ODataPaths: {},
 
-  ODataFunctionImports: {}
+ ODataFunctionImports: {}
 };

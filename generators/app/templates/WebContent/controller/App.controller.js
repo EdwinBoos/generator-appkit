@@ -1,9 +1,9 @@
 sap.ui.define(
-  ["<%= modulePath %>/controller/SuperController"],
+ ["<%= modulePath %>/controller/SuperController"],
 
-  SuperController => {
-    "use strict";
+ SuperController => {
+  "use strict";
 
-    return SuperController.extend("<%= moduleName %>.controller.App", {});
-  }
+  return SuperController.extend("<%= moduleName %>.controller.App", {});
+ }
 );

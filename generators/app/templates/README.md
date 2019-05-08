@@ -1,4 +1,4 @@
-# This UI5 App has been generated with https://github.com/EdwinBoos/generator-appkit
+﻿# This UI5 App has been generated with https://github.com/EdwinBoos/generator-appkit
 
 <h3> Getting started with gulpjs </h3>
 
@@ -28,7 +28,7 @@ Here you see a overview of all the tasks and childtasks:
 ├── transpile-uglify 
 ├── transpile-clean
 ├── sync
-├── prettier
+├── beautiify
 ├── xmlLint
 ├── jsHint
 ├─┬ check
@@ -51,7 +51,7 @@ Here you see a overview of all the tasks and childtasks:
 | transpile-uglify  | root WebContent util control controller | *js | /libraries/bundle.js | Transpiles all es6 files back to es5 (minified/uglified) |
 | transpile-clean  | root WebContent util control controller | *js | /libraries/bundle.js | Transpiles all es6 files back to es5 |
 | sync | .settings  css fragment+view i18n | ** *css *xml *properties  | /WebContent/index.html /WEB-INF/web.xml root/.project root/.classpath |  Copies  all necessary files from ES6 to ES5 folder |
-| prettier  | root WebContent util control controller | *js | /libraries/bundle.js | Prettify your es6 project |
+| beautify  | root WebContent util control controller | *js | /libraries/bundle.js | Prettify your es6 project |
 | xmlLint | fragment view | *xml | | Parses all your xml-views and xml-fragments and gives a more detailed error than the ui5 framework ( with line and char )
 | jsHint  | root WebContent util control controller | *js | /libraries/bundle.js | Code-Quality Tool that checks your js-code quality.
 
