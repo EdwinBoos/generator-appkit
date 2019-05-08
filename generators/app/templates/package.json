@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "gulp-jshint": "^2.1.0",
-    "gulp-prettier": "^2.0.0",
+    "gulp-jsbeautifier": "^3.0.0",
+ 
     "gulp-xml-validator": "^0.2.2",
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1"

@@ -1,6 +1,6 @@
 {
    "name": "generator-appkit",
-   "version": "0.2.7",
+   "version": "0.2.8",
    "description": "ui5 es6 app generator with features like es6 transpilation, browserify, xml validation, minifying source files, jsHint, prettier and more",
    "files": [
       "generators"
@@ -16,6 +16,7 @@
       "yosay": "^1.0.2"
    },
    "devDependencies": {
+      "gulp-jsbeautifier": "^3.0.0",
       "yo": "^2.0.0"
    },
    "repository": {

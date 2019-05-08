@@ -1,62 +1,98 @@
-# generator-appkit [![npm version](https://badge.fury.io/js/generator-appkit.svg)](https://badge.fury.io/js/generator-appkit)
+# This UI5 App has been generated with https://github.com/EdwinBoos/generator-appkit
 
-<h3> Generate SAP UI5 projects which supports features like:</h3>
+<h3> Getting started with gulpjs </h3>
+
+First we need to install gulp globally 
+```npm install gulp -g ```
+
+Next we need to open up the Terminal, navigate to the generated app folder and enter: ```npm install ```
+*  By entering "gulp --tasks" you will see a tree-overview of tasks in your terminal 
+* With "gulp taskname" you can start a predefined task 
+* With "gulp" you will start the default task
+
+We will try to transpile and minify our whole project in es5 back by entering: ```gulp build ```
+
+After this, gulp has created a new folder inside of root folder named build.
+Inside of this folder we have a complete new ui5 application with all neccessary files copied, and all js files minified and translated back in es5 syntax.
+
+The build folder is now ready to run in the browser.
+
+You code or make changes in the root folder in es6, and then build the project, then you need to refresh your browser and the change is there.
+
+If you wan't to let it build automatically when a change happens in es6 folder, there is a watcher task implemented: Type  ```gulp ```
 
 
-- es6 syntax
-- es6 transpilation <br>
-- minifying files<br>
-- xml validation<br>
-- jsHint <br>
-- prettier <br>
-- browserify<br>
-- and more.. <br>
+Here you see a overview of all the tasks and childtasks:
 
-<h3> Use sub-generators to integrate controllers, views, fragments, i18n files in your existing project. </h3>
+```
+├── transpile-uglify 
+├── transpile-clean
+├── sync
+├── beautify 
+├── xmlLint
+├── jsHint
+├─┬ check
+│ ├── jsHint
+│ └── xmlLint
+├─┬ build
+│ ├── transpile-uglify
+│ └── sync
+├─┬ build-debug
+│ ├── transpile-clean
+│ └── sync
+└─┬ default
+  └── build 
+```
 
 
-# Installation
 
-1. Open up your Terminal, navigate to the root folder enter: ```npm install ```
-2. Install yo globally, enter: ```npm install yo -g```
-3. Create a symlink just enter :  ```npm link```
+| Child-Task | observed source-folders | fileextension | observed extra-files | action |
+| :-----: | :-: | :-: | :-: |:-: |
+| transpile-uglify  | root WebContent util control controller | *js | /libraries/bundle.js | Transpiles all es6 files back to es5 (minified/uglified) |
+| transpile-clean  | root WebContent util control controller | *js | /libraries/bundle.js | Transpiles all es6 files back to es5 |
+| sync | .settings  css fragment+view i18n | ** *css *xml *properties  | /WebContent/index.html /WEB-INF/web.xml root/.project root/.classpath |  Copies  all necessary files from ES6 to ES5 folder |
+| beautify  | root WebContent util control controller | *js | /libraries/bundle.js | Prettify your es6 project |
+| xmlLint | fragment view | *xml | | Parses all your xml-views and xml-fragments and gives a more detailed error than the ui5 framework ( with line and char )
+| jsHint  | root WebContent util control controller | *js | /libraries/bundle.js | Code-Quality Tool that checks your js-code quality.
 
-# Running the app generator
+<br>
 
-To run and create a whole new ui5 project in es6 syntax, enter: ```yo appkit ```
+| Root-Task | child tasks | Info |
+| :-----: | :-: | :-: |
+| check | xmlLint jsHint | check your whole project for code quality 
+| build | transpile-uglify sync | Builds whole new es5 project from current es6 App. Best usage for this task is when you want to use the es5 productive, it minifies youre js files, hence it speeds loading times up.
+| build-debug | transpile-uglify sync | Builds whole new es5 project from current es6 App. Best usage for this task is when you want to debug youre code in the browser, it is much better readable than minified.
+| default | build-debug | its a watcher task it will watch all of youre files within the es6 App and will always build when something has changed.
 
-You will have to go trough five steps:
+<h3> Using transpile or sync tasks </h3>
 
-1. Enter a project name that you like
-2. Enter a service name which you would want to connect to and not the whole url.
-3. Enter a module name or package name, that you wish.
-4. Enter a name for the default View/Controller.
-5. Enter a path in which the project should be generated. <br>
-      ```../../```  - Go two folders back and create it there <br>
-      ``` ../output/ ``` - Go a folder back, and place it in the output folder. (When folder does not exist, then it will be created.)
+- they will create a new folder in the same directory as the generated app.
+
+   ``` workspace/fooES6 ( generated app ) creates => workspace/fooES6/build ```
+   
+   
+- transpile tasks will transpile files, create and mirror all folder names within build, and will put the transpiled file in the correct folder f. ex.:
+   
+   ``` workspace/fooES6/WebContent/controller/Main.controller.js create and transpile => workspace/fooES6/build/WebContent/controller/Main.controller.js ```<br> 
+   ``` workspace/fooES6/WebContent/util/Enum.js create and transpile => workspace/fooES6/build/WebContent/util/Enum.js ``` <br>
+   ``` workspace/fooES6/WebContent/libraries/bundle.js create and transpile => workspace/fooES6/build/WebContent/libraries/bundle.js ```  <br>
+   ``` workspace/fooES6/WebContent/Component.js create and transpile => workspace/fooES6/build/WebContent/Component.js ``` <br>
+   ``` ... ```
+
+-  sync task will copy, create and mirror all folder names within build f. ex.: 
  
+   ``` workspace/fooES6/WebContent/view/Main.view.xml create and copy => workspace/fooES6/build/WebContent/view/Main.main.xml ```   <br> 
+   ``` workspace/fooES6/WebContent/fragment/Fragment.view.xml copy => workspace/fooES6/build/WebContent/fragment/Fragment.main.xml ```   <br> 
+   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/fooES6/build/WebContent/index.html ```    <br>
+   ``` workspace/fooES6/WebContent/index.html create and copy => workspace/fooES6/build/WebContent/view/index.html ``` <br>
+   ``` ... ```
 
-[Getting started with gulp, transpiling and more](./generators/app/templates/README.md) <br>
-[Getting started with browserify and installing libraries](./generators/app/templates/WebContent/libraries/README.md)
+- sync task excludes the copy of all unnecessary files in fooES6 f. ex.:.
 
+   ``` workspace/fooES6/WebContent/gulpfile.js will not be copied ```   <br>
+   ``` workspace/fooES6/WebContent/libraries/node_modules/** will not be copied ``` <br>
+   ``` workspace/fooES6/node_modules/** will not be copied ``` <br> 
+   ``` ... ```
 
-# Sub-generators
-
-
-
-* By entering ```yo appkit --generators``` you will see all generators available
-* With ```yo appkit:nameofsubgenerator``` you can run a subgenerator
-
-
-appkit-generator has following sub-generators available:
-
-```
-
-├─┬ appkit
-│ ├── controller ( generates a Controller.js )
-│ └── fragment ( generates a Fragment.xml )
-│ └── i18n ( generates a i18n.properties )
-│ └── view ( generates a View.xml )
-```
 
 
