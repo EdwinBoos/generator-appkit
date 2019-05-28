@@ -31,6 +31,7 @@ describe("generator-appkit", () => {
    path.join(__dirname, "app/test/gulpfile.js"),
    path.join(__dirname, "app/test/package.json"),
    path.join(__dirname, "app/test/README.md"),
+   path.join(__dirname, "app/test/_README.md"),
    path.join(__dirname, "app/test/.settings/.jsdtscope"),
    path.join(__dirname, "app/test/.settings/org.eclipse.jdt.core.prefs"),
    path.join(__dirname, "app/test/.settings/org.eclipse.wst.common.component"),

@@ -1,4 +1,4 @@
-# generator-appkit [![npm version](https://badge.fury.io/js/generator-appkit.svg)](https://badge.fury.io/js/generator-appkit)
+﻿# generator-appkit [![npm version](https://badge.fury.io/js/generator-appkit.svg)](https://badge.fury.io/js/generator-appkit)
 
 <h3> Generate SAP UI5 projects which supports features like:</h3>
 
@@ -37,6 +37,7 @@ You will have to go trough five steps:
  
 
 [Getting started with gulp, transpiling and more](./generators/app/templates/README.md) <br>
+[Getting started with running the application in a webserver](./generators/app/templates/_README.md) <br>
 [Getting started with browserify and installing libraries](./generators/app/templates/WebContent/libraries/README.md)
 
 

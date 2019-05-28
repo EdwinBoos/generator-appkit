@@ -105,6 +105,14 @@ module.exports = class extends generator {
     `${projectOutputPath}/${projectDirectoryName}/README.md`
    )
   );
+
+ this.fs.copy(
+   this.templatePath("_README.md"),
+   this.destinationPath(
+    `${projectOutputPath}/${projectDirectoryName}/_README.md`
+   )
+  );
+
   this.fs.copyTpl(
    this.templatePath(".project"),
    this.destinationPath(
