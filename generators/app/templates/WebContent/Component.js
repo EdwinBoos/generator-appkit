@@ -21,11 +21,17 @@ sap.ui.define(
 
    createURL() {
     if (window.location.hostname === "localhost") {
-     return this.getMetadata().getConfig().serviceConfigLocal.serviceProxyURL;
+     const {
+      serviceProxyURL,
+      directURL
+     } = this.getMetadata().getConfig().serviceConfigLocal
+     if (window.location.port === "1337") {
+      return directURL;
+     } else {
+      return serviceProxyURL;
+     }
     } else {
-     return (
-      this.getMetadata().getConfig().serviceConfig.serviceURL || ""
-     );
+     return this.getMetadata().getConfig().serviceConfig.serviceURL || "";
     }
    },
 

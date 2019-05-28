@@ -33,7 +33,8 @@
                 "serviceURL": "/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
             },
             "serviceConfigLocal": {
-                "serviceProxyURL": "proxy/https/your-url.com/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001"
+                "serviceProxyURL": "proxy/https/your-url.com/sap/opu/odata/irp/<%= serviceName %>/?sap-client=001",
+                "directURL": "https://your-url.com/<%= serviceName %>/?sap-client=100"
             }
         },
         "dependencies": {
