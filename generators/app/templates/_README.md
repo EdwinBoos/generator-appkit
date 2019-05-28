@@ -1,9 +1,9 @@
-﻿<h3> How do I run the build project </h3>
+﻿﻿<h3> How do I run the build project? </h3>
 
 HTTP-Server 
  - Install http-server: ```npm install http-server -g```
  - Navigate to build/WebContent/. and start the server: ```http-server -p 1337 -c1 -a localhost``` <b> 
- Note: It is very important to launch the Server on address localhost and port 1337 </b>
+  <br> Note: It is very important to launch the Server on address localhost and port 1337 </b>
  - Next we need to disable Chromes security:
        -Make a shortcut of chrome.exe and rename it how you like it. 
 	   -Next step is to right click it and set the destination to:  
